@@ -26,8 +26,34 @@
   border-radius: 10%;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
 }
-.section__batton {
+.section__button {
   padding: 2rem 10rem;
+}
+
+.advantages {
+  margin-top: 20rem;
+}
+.advantages__check {
+  width: 3rem;
+  vertical-align: middle;
+}
+.advantages__title {
+  font-weight: 600;
+  font-size: 3rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+.advantages__info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: stretch;
+}
+.advantages__info__text {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-shadow: 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
 }
 
 /*# sourceMappingURL=Section.module.css.map */

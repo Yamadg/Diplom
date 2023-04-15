@@ -29,8 +29,39 @@ margin-top: 5rem;
     border-radius: 10%;
     box-shadow: 0px  5px  5px rgba(0,0,0,40%);
   }
-&__batton{
+&__button{
  padding: 2rem 10rem;
 
 }
+}
+.advantages{
+margin-top: 20rem;
+
+  &__check{
+    width: 3rem;
+    vertical-align: middle;
+
+  }
+
+&__title{
+  font-weight: 600;
+  font-size: 3rem;
+  color:rgba(0,0,0,80%) ;
+}
+
+  &__info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: stretch;
+
+    &__text{
+
+      color:rgba(0,0,0,70%) ;
+      font-size: 3rem;
+      text-transform: uppercase;
+      text-shadow:  0.1rem  0.2rem rgba(0,0,0,20%);
+    }
+  }
 }
