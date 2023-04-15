@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import styles from './Form.module.scss'
+import formImg from '../../assets/slider2.jpg'
 
 const Form = () => {
     const [name, setName] = useState('');
@@ -36,37 +37,45 @@ const Form = () => {
     };
 
     return (
+        <div className={styles.wrapper}>
+            <img className={styles.img} src={formImg}/>
         <form className={styles.form}>
+            <p className={styles.form__name}>Форма обратной связи</p>
+            <input className={styles.form__inputs}
+                   placeholder='Введите имя'
+                   type="text"
+                   id="name"
+                   name="name"
+                   value={name}
+                   onChange={handleNameChange}
+            />
 
             <input className={styles.form__inputs}
-                type="text"
-                id="name"
-                name="name"
-                value={name}
-                onChange={handleNameChange}
+                   placeholder='Введите почту'
+                   type="email"
+                   id="email"
+                   name="email"
+                   value={email}
+                   onChange={handleEmailChange}
             />
+            <textarea className={styles.form__textarea}
 
-            <input className={styles.form__inputs}
-                type="email"
-                id="email"
-                name="email"
-                value={email}
-                onChange={handleEmailChange}
-            />
-            <textarea
-                id="message"
-                name="message"
-                value={message}
-                onChange={handleMessageChange}
+                      placeholder='Введите сообщение'
+                      id="message"
+                      name="message"
+                      value={message}
+                      onChange={handleMessageChange}
             />
 
 
-
-            <button type="submit" onClick={handleSubmit}>
+            <button className={styles.form__buttons} type="submit" onClick={handleSubmit}>
                 Отправить
             </button>
-
         </form>
+
+
+
+        </div>
     );
 };
 

@@ -17,7 +17,7 @@ const Section = () => {
                 </div>
                 <img className={styles.section__img} src={sectionImg} alt={sectionImg}/>
             </div>
-            <button className={styles.section__button}></button>
+            <button className={styles.section__button}>Оставить заявку</button>
         </section>
 
 
