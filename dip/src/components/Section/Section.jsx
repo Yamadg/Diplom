@@ -22,7 +22,8 @@ const Section = () => {
 
 
             <section className={styles.advantages}>
-                <p className={styles.advantages__title}>Преимущества<img className={styles.advantages__check} src={checkImg}/></p>
+                <p className={styles.advantages__title}>Преимущества <img className={styles.advantages__check} src={checkImg} alt={'checkImg'}/></p>
+
                 <p className={styles.advantages__info}>
                 <p className={styles.advantages__info__text}>Беремся за заказы любой<br/>сложности</p>
                 <p className={styles.advantages__info__text}>Связь в любое время по <br/>всем впоросам</p>
