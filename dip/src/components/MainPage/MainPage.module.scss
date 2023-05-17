@@ -1,0 +1,57 @@
+.mainPage {
+  padding: 1rem 0;
+
+  &__wrapper {
+    margin: 0 3rem;
+  }
+
+  &__aboutUs {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+
+    &__order {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      max-width: 400px;
+
+      &__title {
+        font: normal 32px/34px Ubuntu, sans-serif;
+        margin: 0;
+        text-shadow: 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
+      }
+
+      &__subTitle {
+        color: #a6a6a6;
+      }
+
+      &__button {
+        border: none;
+        font: normal 22px/24px Ubuntu, sans-serif;
+        max-width: 250px;
+        padding: 10px 5px;
+        border-radius: 5px;
+        color: white;
+        background-color: rgba(0, 111, 250, 0.6);
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.3);
+          cursor: pointer;
+          color: rgba(0, 0, 0, 0.6);
+          outline: 1.5px solid rgba(0, 0, 0, 0.6);
+        }
+      }
+    }
+
+    &__img {
+      max-width: 400px;
+      border-radius: 25px;
+    }
+  }
+
+  &__advantages {
+    display: flex;
+    gap: .5rem;
+  }
+}

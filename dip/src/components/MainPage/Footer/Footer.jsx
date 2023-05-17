@@ -2,7 +2,7 @@
 
 import styles from './Footer.module.scss'
 
-import logoImg from '../../assets/logo2.svg'
+import logoImg from '../../../assets/logo2.svg'
 
 
 function Footer() {

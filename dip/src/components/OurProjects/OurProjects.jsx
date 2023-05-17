@@ -1,10 +1,10 @@
 import './App.css';
 
 import styles from './SecondPageModule.scss'
-import Nav from "../Nav/Nav";
+import Nav from "../MainPage/Nav/Nav";
 
 
-function SecondPage() {
+function OurProjects() {
     return (
         <main>
             <Nav/>
@@ -19,4 +19,4 @@ function SecondPage() {
     );
 }
 
-export default SecondPage;
+export default OurProjects;
