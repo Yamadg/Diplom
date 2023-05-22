@@ -1,39 +1,60 @@
-const { Proposal } = require('../models/models');
+const { Proposal } = require("../models/models");
+const jwt = require('jsonwebtoken')
+
+const admin = (token) => {
+  if (!token) {
+    return false;
+  }
+  const user = jwt.verify(token, process.env.SECRET_KEY);
+  return user.role;
+};
 
 class ProposalController {
-    async create(req, res, next) {
-        try {
-
-        } catch(err) {
-            console.log(err)
-        }
+  async create(req, res, next) {
+    if(!admin()) {
+        return res.status(401).json({message: 'Нет доступа!'})
     }
-
-    async getAll(req, res) {
-        return res.json(await Proposal.findAll());
+    try {
+    } catch (err) {
+      console.log(err);
     }
+  }
 
-    async getById(req, res) {
-        const { id } = req.params;
-
-        const item = await Proposal.findOne(
-            {
-                where: { id }
-            }
-        );
-        return res.json(item);
+  async getAll(req, res) {
+    if(!admin()) {
+        return res.status(401).json({message: 'Нет доступа!'})
     }
+    return res.json(await Proposal.findAll());
+  }
 
-    async delete(req, res) {
-        const { id } = req.params;
-        
-        const item = await Proposal.destroy({where: { id }});
-        return res.json(item);
+  async getById(req, res) {
+    if(!admin()) {
+        return res.status(401).json({message: 'Нет доступа!'})
     }
+    const { id } = req.params;
 
-    async update(req, res) {
-        return 1;
+    const item = await Proposal.findOne({
+      where: { id },
+    });
+    return res.json(item);
+  }
+
+  async delete(req, res) {
+    if(!admin()) {
+        return res.status(401).json({message: 'Нет доступа!'})
     }
+    const { id } = req.params;
+
+    const item = await Proposal.destroy({ where: { id } });
+    return res.json(item);
+  }
+
+  async update(req, res) {
+    if(!admin()) {
+        return res.status(401).json({message: 'Нет доступа!'})
+    }
+    return 1;
+  }
 }
 
 module.exports = new ProposalController();
