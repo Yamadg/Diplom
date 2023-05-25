@@ -80,3 +80,14 @@ main {
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
 }
+
+.container {
+    margin: 0 3rem;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 600px;
+        margin: 0 1rem;
+    }
+}

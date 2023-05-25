@@ -4,10 +4,20 @@
   align-items: center;
   gap: 2rem;
   min-height: 100vh;
+  position: relative;
 
   button {
     background: none;
+    position: absolute;
     border: unset;
+    z-index: 10;
+    margin: -2rem;
+    &:first-child {
+      left: 0px;
+    }
+    &:last-child {
+      right: 0px;
+    }
   }
 }
 .slider__line {
@@ -16,12 +26,22 @@
   flex-direction: row;
   overflow: hidden;
   border-radius: 5px;
+
+  @media screen and (max-width: 768px) {
+    width: 400px;
+  }
 }
 .container {
   transition: .5s transform ease;
 }
 .container img {
   max-width: 800px;
+  @media screen and (max-width: 768px) {
+    max-width: 400px;
+  }
+  @media screen and (max-width: 400px) {
+    max-width: 320px;
+  }
 }
 
 .arrow {

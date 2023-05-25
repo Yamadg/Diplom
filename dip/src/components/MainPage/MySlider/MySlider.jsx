@@ -6,16 +6,26 @@ import build from "../../../assets/fon1.jpg";
 
 const MySlider = () => {
   const [offset, setOffset] = useState(0);
+  const [amountOfSlides] = useState(iconsData.length - 1);
+  const [perSlide, setPerSlide] = useState(800);
 
   const nextButtonClick = () => {
-    setOffset(offset - 800);
-    if (offset === -3200) setOffset(0);
+    setOffset(offset - perSlide);
+    console.log(-(amountOfSlides * perSlide))
+    if (offset === -(amountOfSlides * perSlide)) setOffset(0);
   };
 
   const prevButtonClick = () => {
-    setOffset(offset + 800);
-    if (offset === 0) setOffset(-3200);
+    setOffset(offset + perSlide);
+    if (offset === 0) setOffset(-(amountOfSlides * perSlide));
   };
+
+  useEffect(() => {
+    if(window.matchMedia('(max-width: 768px)').matches) {
+      setPerSlide(400);
+    }
+    
+  }, [])
 
   return (
     <div className={style.slider}>

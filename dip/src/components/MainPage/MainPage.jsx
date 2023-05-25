@@ -26,7 +26,7 @@ const MainPage = () => {
 
   return (
     <div className={styles.mainPage}>
-      <section className={styles.mainPage__wrapper}>
+      <section className={`container`}>
         <Nav/>
         <div className={styles.mainPage__aboutUs}>
           <div className={styles.mainPage__aboutUs__order}>
