@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { slide as Menu } from "react-burger-menu";
 
@@ -10,10 +10,17 @@ import imgLogo from "../../../assets/logo1.svg";
 
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [auth, setAuth] = useState(false);
 
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  useEffect(() => {
+    if(localStorage.getItem('token')) {
+      setAuth(true)
+    };
+  }, [])
 
   return (
     <header className={styles.nav}>
@@ -35,8 +42,8 @@ const Nav = () => {
           </Link>
         </li>
         <li>
-          <Link to={"/login"} className={styles.nav__menu__text}>
-            Авторизация
+          <Link to={`${auth ? '/admin' : '/login'}`} className={styles.nav__menu__text}>
+            { auth ? 'Заявки' : 'Авторизация' }
           </Link>
         </li>
       </ul>

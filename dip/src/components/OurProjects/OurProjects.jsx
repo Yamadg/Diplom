@@ -1,13 +1,9 @@
-import './App.css';
-
-import styles from './SecondPageModule.scss'
-import Nav from "../MainPage/Nav/Nav";
-
+import styles from './OurProjects.module.scss'
+import Wrapper from '../Wrapper/Wrapper';
 
 function OurProjects() {
     return (
-        <main>
-            <Nav/>
+        <Wrapper>
             <div className={styles.section__fact}>
                 <img/>
                 <div>
@@ -15,7 +11,7 @@ function OurProjects() {
                     <p></p>
                 </div>
             </div>
-        </main>
+        </Wrapper>
     );
 }
 
