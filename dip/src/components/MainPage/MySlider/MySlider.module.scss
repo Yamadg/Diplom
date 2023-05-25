@@ -4,6 +4,11 @@
   align-items: center;
   gap: 2rem;
   min-height: 100vh;
+
+  button {
+    background: none;
+    border: unset;
+  }
 }
 .slider__line {
   display: flex;
@@ -17,4 +22,20 @@
 }
 .container img {
   max-width: 800px;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 15px;
+
+  &.next {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+  &.prev {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
 }

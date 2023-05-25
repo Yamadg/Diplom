@@ -11,7 +11,7 @@ function App() {
         <BrowserRouter>
             <Routes>
                 {/* подстановочный путь */}
-                <Route path={"main-page"} element={<MainPage/>}/>
+                <Route path={"/"} element={<MainPage/>}/>
                 <Route path={"project"} element={<Nav/>} />
                 <Route path={"about"} element={<Footer/>} />
             </Routes>

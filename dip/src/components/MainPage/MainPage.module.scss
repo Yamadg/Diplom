@@ -48,10 +48,23 @@
       max-width: 400px;
       border-radius: 25px;
     }
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        gap: 15px;
+
+        &__order, &__img {
+            max-width: none;
+        }
+        
+    }
   }
 
   &__advantages {
     display: flex;
     gap: .5rem;
+    margin-top: 2rem;
+    align-items: center;
+    justify-content: center;
   }
 }

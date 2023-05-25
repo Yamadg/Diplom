@@ -11,10 +11,8 @@ const admin = (token) => {
 
 class ProposalController {
   async create(req, res, next) {
-    if(!admin()) {
-        return res.status(401).json({message: 'Нет доступа!'})
-    }
     try {
+      Proposal.create(res);
     } catch (err) {
       console.log(err);
     }

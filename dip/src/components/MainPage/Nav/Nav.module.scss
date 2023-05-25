@@ -1,5 +1,5 @@
 * {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .nav {
@@ -20,7 +20,7 @@
       text-decoration: none;
       color: #000;
       font-size: 1.1rem;
-      transition: .3s all;
+      transition: 0.3s all;
 
       &:hover {
         color: #421de8;
@@ -36,12 +36,14 @@
   display: none;
 
   &__toggle {
-
-
     &__item {
-      width: 5px;
-      height: 2px;
+      width: 25px;
+      height: 4px;
+      margin-top: .2rem;
       background-color: black;
+      &:last-child {
+        margin-bottom: .2rem;
+      }
     }
   }
 }
