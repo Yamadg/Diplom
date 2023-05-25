@@ -1,0 +1,12 @@
+.footer {
+    .wrapper {
+        display: grid;
+        grid-template-columns: 2fr 2fr 2fr;
+    }
+    &__sections, &__document {
+        li {
+            list-style-type: none;
+            margin-bottom: 1rem;
+        }
+    }
+}

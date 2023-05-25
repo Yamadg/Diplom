@@ -34,6 +34,11 @@ const Nav = () => {
             О нас
           </Link>
         </li>
+        <li>
+          <Link to={"/login"} className={styles.nav__menu__text}>
+            Авторизация
+          </Link>
+        </li>
       </ul>
       <div className={styles.burgerMenu}>
         <button

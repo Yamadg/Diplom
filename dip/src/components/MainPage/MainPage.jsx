@@ -6,6 +6,7 @@ import Nav from "./Nav/Nav";
 import MySlider from "./MySlider/MySlider";
 import Form from "./Form/Form";
 import Footer from "./Footer/Footer";
+import Wrapper from '../Wrapper/Wrapper';
 
 import styles from "./MainPage.module.scss";
 
@@ -25,9 +26,8 @@ const MainPage = () => {
   // }
 
   return (
-    <div className={styles.mainPage}>
-      <section className={`container`}>
-        <Nav/>
+    <Wrapper className={styles.mainPage}>
+      <section>
         <div className={styles.mainPage__aboutUs}>
           <div className={styles.mainPage__aboutUs__order}>
             <h2 className={styles.mainPage__aboutUs__order__title}>
@@ -56,9 +56,8 @@ const MainPage = () => {
         </div>
         <MySlider/>
         <Form />
-        {/*<Footer ref={myRef}/>*/}
       </section>
-    </div>
+    </Wrapper>
   );
 };
 
