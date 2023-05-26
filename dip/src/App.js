@@ -7,6 +7,7 @@ import OurProjects from "./components/OurProjects/OurProjects";
 
 import './App.css';
 import Login from "./components/Login/Login";
+import Admin from "./components/Admin/Admin";
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
                 <Route path={"project"} element={<OurProjects/>} />
                 <Route path={"about"} element={<Footer/>} />
                 <Route path={"login"} element={<Login />} />
+                <Route path={"admin"} element={<Admin />} />
             </Routes>
         </BrowserRouter>
     );

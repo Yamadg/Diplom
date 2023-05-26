@@ -24,7 +24,7 @@ const Nav = () => {
 
   return (
     <header className={styles.nav}>
-      <img src={imgLogo} className={styles.logo} alt={imgLogo} />
+      <Link to={'/'}><img src={imgLogo} className={styles.logo} alt={imgLogo} /></Link>
       <ul className={styles.nav__menu}>
         <li>
           <Link to={"/"} className={styles.nav__menu__text}>

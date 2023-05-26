@@ -12,21 +12,30 @@ const admin = (token) => {
 class ProposalController {
   async create(req, res, next) {
     try {
-      Proposal.create(res);
+      const { name, email, message } = req.body;
+      if(await Proposal.findOne({where: {email}})) {
+        return res.status(409).json({message: 'Почта уже занята'})
+      }
+      const proposal = await Proposal.create({name, email, text: message});
+      return res.status(200).json(proposal);
     } catch (err) {
       console.log(err);
+      return res.json({message: err});
     }
   }
 
   async getAll(req, res) {
-    if(!admin()) {
+    const token = req.headers['authorization'];
+    
+    if(!admin(token)) {
         return res.status(401).json({message: 'Нет доступа!'})
     }
     return res.json(await Proposal.findAll());
   }
 
   async getById(req, res) {
-    if(!admin()) {
+    const token = req.headers['authorization'];
+    if(!admin(token)) {
         return res.status(401).json({message: 'Нет доступа!'})
     }
     const { id } = req.params;
@@ -38,7 +47,8 @@ class ProposalController {
   }
 
   async delete(req, res) {
-    if(!admin()) {
+    const token = req.headers['authorization'];
+    if(!admin(token)) {
         return res.status(401).json({message: 'Нет доступа!'})
     }
     const { id } = req.params;
@@ -48,10 +58,13 @@ class ProposalController {
   }
 
   async update(req, res) {
-    if(!admin()) {
+    const token = req.headers['authorization'];
+    if(!admin(token)) {
         return res.status(401).json({message: 'Нет доступа!'})
     }
-    return 1;
+    const { email, name, text } = req.body;
+    const item = await Proposal.update({email, name, text}, {where: {id: req.body.id}})
+    return res.json(item);
   }
 }
 
