@@ -74,6 +74,9 @@ const Nav = () => {
             <li>
               <Link to={"/about"}>О нас</Link>
             </li>
+            <li>
+              <Link to={"/login"}>Авторизация</Link>
+            </li>
           </ul>
         </Menu>
       </div>

@@ -16,12 +16,6 @@ const Form = forwardRef(() => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const formData = {
-      name,
-      email,
-      message
-    };
-
     if(!(name.length && email.length && message.length)) {
       setError('Заполнены не все поля');
       return;
@@ -45,7 +39,7 @@ const Form = forwardRef(() => {
   };
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} id="form">
       <img className={styles.img} src={formImg}/>
       <form className={styles.form}>
         <p className={styles.form__name}>Форма обратной связи</p>

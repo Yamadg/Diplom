@@ -43,7 +43,7 @@ const MainPage = () => {
                // onClick={handleClick}
                className={styles.mainPage__aboutUs__order__button}
             >
-              Оставить заявку
+              <a className={styles.mainPage__aboutUs__order__link} href="#form">Оставить заявку</a>
             </button>
           </div>
           <img src={building} alt="Фото" className={styles.mainPage__aboutUs__img}/>

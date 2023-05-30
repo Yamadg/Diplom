@@ -1,0 +1,91 @@
+.about__us {
+    h1 {
+        font-size: 48px;
+        font-weight: 300;
+    }
+    &_content {
+        max-width: 70%;
+        display: block;
+        line-height: 30px;
+        font-weight: 300;
+
+        @media screen and (max-width: 1024px) {
+            max-width: none;
+        }
+    }
+    &_info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 20px;
+
+        .right__content {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            
+            justify-content: space-between;
+            gap: 20px;
+
+            img {
+                float: left;
+                margin-right: 20px;
+            }
+
+            &__item {
+                border: 1px solid #CACACA;
+                padding: 55px 35px;
+                border-radius: 10px;
+
+                .content__text {
+                    display: block;
+                    max-width: 90%;
+                    line-height: 30px;
+                    font-weight: 300;
+                }
+            }
+        }
+
+        &_image {
+            display: flex;
+            img {
+                max-height: 630px;
+                max-width: 100%;
+                height: auto;
+                min-width: 300px;
+                object-fit: cover;
+            }
+        }
+        &_right {
+            display: flex;
+            &__item{
+                display: flex;
+                &__item {
+                    display: flex;
+                    flex-direction: row;
+                    .content__text {
+                        line-height: 30px;
+                        font-weight: 300;
+                    }
+
+
+                }
+            }
+            
+        }
+
+        @media screen and (max-width: 1024px) {
+            flex-direction: column;
+        }
+    }
+
+    &_questions {
+        h3 {
+            font-size: 48px;
+            font-weight: 300;
+        }
+        &__content {
+            margin-bottom: 40px;
+        }
+    }
+}

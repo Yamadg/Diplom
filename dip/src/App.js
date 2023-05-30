@@ -8,6 +8,7 @@ import OurProjects from "./components/OurProjects/OurProjects";
 import './App.css';
 import Login from "./components/Login/Login";
 import Admin from "./components/Admin/Admin";
+import AboutUs from "./components/AboutUs/AboutUs";
 
 function App() {
     return (
@@ -16,7 +17,7 @@ function App() {
                 {/* подстановочный путь */}
                 <Route path={"/"} element={<MainPage/>}/>
                 <Route path={"project"} element={<OurProjects/>} />
-                <Route path={"about"} element={<Footer/>} />
+                <Route path={"about"} element={<AboutUs/>} />
                 <Route path={"login"} element={<Login />} />
                 <Route path={"admin"} element={<Admin />} />
             </Routes>
