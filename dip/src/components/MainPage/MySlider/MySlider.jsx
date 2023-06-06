@@ -7,7 +7,7 @@ import build from "../../../assets/fon1.jpg";
 const MySlider = () => {
   const [offset, setOffset] = useState(0);
   const [amountOfSlides] = useState(iconsData.length - 1);
-  const [perSlide, setPerSlide] = useState(800);
+  const [perSlide, setPerSlide] = useState(100);
 
   const nextButtonClick = () => {
     setOffset(offset - perSlide);
@@ -20,12 +20,12 @@ const MySlider = () => {
     if (offset === 0) setOffset(-(amountOfSlides * perSlide));
   };
 
-  useEffect(() => {
-    if(window.matchMedia('(max-width: 768px)').matches) {
-      setPerSlide(400);
-    }
-    
-  }, [])
+  // useEffect(() => {
+  //   if(window.matchMedia('(max-width: 768px)').matches) {
+  //     setPerSlide(400);
+  //   }
+  //
+  // }, [])
 
   return (
     <div className={style.slider}>
@@ -34,11 +34,11 @@ const MySlider = () => {
         {iconsData.map((icon) => {
           return (
             <div
-              style={{ transform: `translateX(${offset}px)` }}
+              style={{ transform: `translateX(${offset}%)` }}
               className={style.container}
               key={icon.id}
             >
-              <img src={icon.icon} alt={`Слайд ${icon.id}`} />
+                <img className={style.img__slider} src={icon.icon} alt={`Слайд ${icon.id}`} />
             </div>
           );
         })}
