@@ -1,6 +1,7 @@
 import styles from "./Footer.module.scss";
 
 import logoImg from "../../../assets/logo2.svg";
+import policy from '../../../assets/policy.pdf'
 
 function Footer() {
   return (
@@ -17,7 +18,7 @@ function Footer() {
         </ul>
         <ul className={styles.footer__document}>
           <li>Пользовательская соглашение</li>
-          <li>Политика обработки персональных данных</li>
+          <li><a href={policy} target="_blank" rel="noreferrer">Политика обработки персональных данных</a></li>
           <li>Презентация</li>
         </ul>
       </nav>

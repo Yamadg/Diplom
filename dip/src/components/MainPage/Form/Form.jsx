@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import styles from './Form.module.scss';
 
 import formImg from '../../../assets/slider2.jpg';
+import policy from '../../../assets/policy.pdf'
 
 const Form = forwardRef(() => {
   const [name, setName] = useState('');
@@ -80,7 +81,7 @@ const Form = forwardRef(() => {
         {error && <span className={styles.form__error}>{error}</span>}
         <label className={styles.form__checkbox}>
           <input value={agree} onChange={(e) => setAgree(!!e.target.checked)} type="checkbox" />
-          <span>Согласие на <a href="">обработку персональных данных</a></span>
+          <span>Согласие на <a href={policy} target="_blank" rel="noreferrer">обработку персональных данных</a></span>
         </label>
         <button className={styles.form__buttons} type="submit" onClick={handleSubmit}>
           Отправить
