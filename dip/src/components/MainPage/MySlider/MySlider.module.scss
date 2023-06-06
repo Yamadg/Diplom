@@ -6,29 +6,10 @@
 
   position: relative;
 
-  button {
-    background: none;
-    position: absolute;
-    border: unset;
-    z-index: 10;
-
-    &:first-child {
-      left: 1px;
-      cursor: pointer;
-    }
-    &:last-child {
-      right: 1px;
-      cursor: pointer;
-    }
-  }
 }
 .slider__line {
-  display: flex;
-  flex-direction: row;
-  overflow: hidden;
-  border-radius: 35px;
-  opacity: 70%;
-
+  max-width: 100%;
+  
   @media screen and (max-width: 768px) {
     width: 500px;
   }
@@ -73,7 +54,6 @@
 }
 .img__slider{
   object-fit: cover;
-  width: 80%;
+  width: 100%;
   height: 400px;
-
 }

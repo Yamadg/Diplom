@@ -23,7 +23,7 @@ const Nav = () => {
   }, [])
 
   return (
-    <header className={styles.nav}>
+    <header className={`${styles.nav} container`}>
       <Link to={'/'}><img src={imgLogo} className={styles.logo} alt={imgLogo} /></Link>
       <ul className={styles.nav__menu}>
         <li>
@@ -32,8 +32,8 @@ const Nav = () => {
           </Link>
         </li>
         <li>
-          <Link to={"/project"} className={styles.nav__menu__text}>
-            Наши проекты
+          <Link to={"/command"} className={styles.nav__menu__text}>
+            Наша команда
           </Link>
         </li>
         <li>
@@ -69,7 +69,7 @@ const Nav = () => {
               <Link to={"/"}>Главная</Link>
             </li>
             <li>
-              <Link to={"/project"}>Наши проекты</Link>
+              <Link to={"/command"}>Наша команда</Link>
             </li>
             <li>
               <Link to={"/about"}>О нас</Link>

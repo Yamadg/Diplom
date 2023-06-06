@@ -99,6 +99,22 @@
       font-size: 1.2rem;
     }
   }
+
+  &__checkbox {
+    margin-top: 1rem;
+    input {
+      transform: scale(1.5);
+      opacity: 0.9;
+      cursor: pointer;
+    }
+    span {
+      margin-left: .4rem;
+
+      a {
+        color: var(--main-color)
+      }
+    }
+  }
 }
 
 .img {

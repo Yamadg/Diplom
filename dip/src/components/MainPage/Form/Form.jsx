@@ -12,13 +12,18 @@ const Form = forwardRef(() => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
+  const [agree, setAgree] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    
 
     if(!(name.length && email.length && message.length)) {
       setError('Заполнены не все поля');
       return;
+    }
+    if(!agree) {
+      setError('Пожалуйста, согласитесь на обработку данных.')
     }
     /* regular expression for email */
     if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))) {
@@ -73,6 +78,10 @@ const Form = forwardRef(() => {
                   onChange={(e) => setMessage(e.target.value)}
         />
         {error && <span className={styles.form__error}>{error}</span>}
+        <label className={styles.form__checkbox}>
+          <input value={agree} onChange={(e) => setAgree(!!e.target.checked)} type="checkbox" />
+          <span>Согласие на <a href="">обработку персональных данных</a></span>
+        </label>
         <button className={styles.form__buttons} type="submit" onClick={handleSubmit}>
           Отправить
         </button>

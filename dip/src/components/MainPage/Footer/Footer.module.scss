@@ -1,5 +1,6 @@
 .footer {
-
+    background: var(--main-color);
+    padding: .5rem .3rem;
     .wrapper {
         display: grid;
         grid-template-columns: 2fr 2fr 2fr;

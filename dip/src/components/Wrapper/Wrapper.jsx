@@ -1,12 +1,13 @@
 import Nav from "../MainPage/Nav/Nav";
 import Footer from "../MainPage/Footer/Footer";
+import './Wrapper.module.scss'
 
 export default function Wrapper({ children, className = '' }) {
-    const classNames = `container ${className}`;
+    
     return (
-        <main className={classNames}>
+        <main className={className}>
             <Nav />
-            {children}
+            <div className="container">{children}</div>
             <Footer />
         </main>
     )

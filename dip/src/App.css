@@ -1,3 +1,7 @@
+:root {
+  --main-color: rgba(0, 111, 250, 0.6);
+}
+
 .bm-burger-button {
   position: fixed;
   width: 36px;
@@ -86,4 +90,8 @@
     .container {
         margin: 0 1rem;
     }
+}
+
+.swiper-button-prev, .swiper-button-next {
+  color: black;
 }

@@ -1,0 +1,60 @@
+.command__item {
+    display: flex;
+    &_img {
+        display: flex;
+        img {
+            max-height: 400px;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+    &_content {
+        margin-top: 0.8rem;
+        max-height: calc(400px - 3rem);
+        font-weight: 500;
+        border: 1px solid rgba(219, 227, 240, 1);
+        border-radius: 20px;
+        box-shadow: 0px 20px 64px rgba(99, 120, 153, 0.08);
+
+        .content__wrapper {
+            padding: 2rem;
+            max-width: 258px;
+        }
+
+        h3 {
+            margin: 0;
+        }
+
+        .name {
+            font-size: 28px;
+            line-height: 50px;
+        }
+
+        .vacancy {
+            color: rgba(99, 120, 153, 1);
+        }
+
+        .info {
+            line-height: 24px;
+        }
+
+        .detail {
+
+        }
+    }
+
+    &:nth-child(2n) {
+        justify-content: flex-end;
+    }
+
+    @media screen and (max-width: 530px) {
+        flex-direction: column;
+        margin-bottom: 20px; 
+
+        &_img {
+            max-height: 300px;
+            object-fit: cover;
+        }
+    }
+}

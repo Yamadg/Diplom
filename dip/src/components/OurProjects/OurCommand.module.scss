@@ -1,0 +1,13 @@
+
+.command {
+    h1 {
+        font-weight: 300;
+        font-size: 48px;
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+    }
+    
+}

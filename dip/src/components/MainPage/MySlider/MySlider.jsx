@@ -1,4 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/scrollbar";
+import "swiper/css/autoplay";
 
 import { iconsData } from "../../../mockData/iconsData";
 import style from "./MySlider.module.scss";
@@ -11,7 +18,7 @@ const MySlider = () => {
 
   const nextButtonClick = () => {
     setOffset(offset - perSlide);
-    console.log(-(amountOfSlides * perSlide))
+    console.log(-(amountOfSlides * perSlide));
     if (offset === -(amountOfSlides * perSlide)) setOffset(0);
   };
 
@@ -29,21 +36,21 @@ const MySlider = () => {
 
   return (
     <div className={style.slider}>
-      <button onClick={prevButtonClick}><i className={`${style.arrow}  ${style.prev}`}></i></button>
       <div className={style.slider__line}>
-        {iconsData.map((icon) => {
-          return (
-            <div
-              style={{ transform: `translateX(${offset}%)` }}
-              className={style.container}
-              key={icon.id}
-            >
-                <img className={style.img__slider} src={icon.icon} alt={`Слайд ${icon.id}`} />
-            </div>
-          );
-        })}
+        <Swiper
+          modules={[Navigation, Autoplay]}
+          autoplay={{delay: 3000}}
+          navigation
+          spaceBetween={50}
+          slidesPerView={1}
+        >
+          {iconsData.map((icon) => (
+            <SwiperSlide key={icon.id}>
+              <img className={style.img__slider} src={icon.icon} alt="" />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
-      <button onClick={nextButtonClick}><i className={`${style.arrow}  ${style.next}`}></i></button>
     </div>
   );
 };
