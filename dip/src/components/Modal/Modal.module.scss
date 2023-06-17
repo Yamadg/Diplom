@@ -20,13 +20,23 @@
         position: relative;
         border-radius: 15px;
         background: white;
-        border: .5rem solid black;
+        border: 1px solid black;
 
         &.small {
             max-width: 350px;
             padding: 3rem;
             max-height: 200px;
         }
+
+        @media screen and (max-width: 700px) {
+            padding: 1rem .1rem;
+            max-width: 450px;
+        }
+
+        @media screen and (max-width: 460px) {
+            max-width: 300px;
+        }
+
     }
 
     &__top {
@@ -42,6 +52,12 @@
             right: 3rem;
             top: 1rem;
             font-size: 24px;
+
+            @media screen and (max-width: 460px) {
+                right: 15px;
+                top: 0;
+            }
+    
         }
     }
 

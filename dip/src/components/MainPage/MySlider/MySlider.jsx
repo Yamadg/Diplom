@@ -39,7 +39,7 @@ const MySlider = () => {
       <div className={style.slider__line}>
         <Swiper
           modules={[Navigation, Autoplay]}
-          autoplay={{delay: 3000}}
+          autoplay={{delay: 5000}}
           navigation
           spaceBetween={50}
           slidesPerView={1}

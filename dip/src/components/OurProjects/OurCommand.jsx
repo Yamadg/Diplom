@@ -7,7 +7,7 @@ function OurCommand() {
   return (
     <Wrapper>
       <section className={styles.command}>
-        <h1>Наша команда</h1>
+        <h1 className="title">Наша команда</h1>
         <section className={styles.command__items}>
           <CommandItem
             img={employee}

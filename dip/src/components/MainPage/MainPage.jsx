@@ -39,21 +39,30 @@ const MainPage = () => {
             <div className={styles.mainPage__aboutUs__order__subTitle}>
               От проектировщиков,знающих своё дело
             </div>
-            <button type="submit"
-               // onClick={handleClick}
-               className={styles.mainPage__aboutUs__order__button}
-            >
-              <a className={styles.mainPage__aboutUs__order__link} href="#form">Оставить заявку</a>
-            </button>
+            
+            <a className={styles.mainPage__aboutUs__order__link} href="#form">
+              <button type="submit"
+                 // onClick={handleClick}
+                 className={styles.mainPage__aboutUs__order__button}
+              >
+                Оставить заявку
+              </button>
+            </a>
           </div>
           <img src={building} alt="Фото" className={styles.mainPage__aboutUs__img}/>
         </div>
-        <div className={styles.mainPage__advantages}>
-          <h1 className={styles.mainPage__advantages__title}>
-            Наши преимущества
-          </h1>
+        {/* <div className={styles.mainPage__advantages}>
           <img src={advantages} alt="Фото"/>
-        </div>
+        </div> */}
+        <section className={styles.advantages}>
+                <p className={styles.advantages__title}>Преимущества <img className={styles.advantages__check} src={advantages}  alt={'checkImg'}/></p>
+
+                <p className={styles.advantages__info}>
+                <p className={styles.advantages__info__text}>Беремся за заказы любой<br/>сложности</p>
+                <p className={styles.advantages__info__text}>Связь в любое время по <br/>всем впоросам</p>
+                <p className={styles.advantages__info__text}>Большой опыт работы</p>
+                </p>
+            </section>
         <MySlider/>
         <Form />
       </section>

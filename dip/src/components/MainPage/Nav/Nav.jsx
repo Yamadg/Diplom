@@ -41,11 +41,11 @@ const Nav = () => {
             О нас
           </Link>
         </li>
-        <li>
-          <Link to={`${auth ? '/admin' : '/login'}`} className={styles.nav__menu__text}>
-            { auth ? 'Заявки' : 'Авторизация' }
-          </Link>
-        </li>
+        {auth && 
+              <li>
+                <Link className={styles.nav__menu__text} to={'/admin'}>Заявки</Link>
+              </li>
+            }
       </ul>
       <div className={styles.burgerMenu}>
         <button
@@ -74,9 +74,11 @@ const Nav = () => {
             <li>
               <Link to={"/about"}>О нас</Link>
             </li>
-            <li>
-              <Link to={"/login"}>Авторизация</Link>
-            </li>
+            {auth && 
+              <li>
+                <Link to={'/admin'}>Заявки</Link>
+              </li>
+            }
           </ul>
         </Menu>
       </div>

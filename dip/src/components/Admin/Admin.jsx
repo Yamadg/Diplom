@@ -61,41 +61,43 @@ export default function Admin() {
   return (
     <Wrapper>
       <h1>Заявки</h1>
-      <table className={styles.table}>
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Имя</th>
-            <th>Почта</th>
-            <th>Сообщение</th>
-            <th>Действия</th>
-          </tr>
-        </thead>
-        <tbody>
-          {proposals?.map((item) => (
-            <tr key={item.id}>
-              <td>{item.id}</td>
-              <td>{item.name}</td>
-              <td>{item.email}</td>
-              <td>{item.text}</td>
-              <td className={styles.actions}>
-                <button
-                  onClick={() => handleEdit(item.id)}
-                  className={styles.action__button}
-                >
-                  ✎
-                </button>
-                <button
-                  onClick={() => handleDelete(item.id)}
-                  className={styles.action__button}
-                >
-                  <img src={bin} alt="" />
-                </button>
-              </td>
+      <div className={styles.table__wrapper}>
+        <table className={styles.table}>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Имя</th>
+              <th>Почта</th>
+              <th>Сообщение</th>
+              <th>Действия</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {proposals?.map((item) => (
+              <tr key={item.id}>
+                <td>{item.id}</td>
+                <td>{item.name}</td>
+                <td>{item.email}</td>
+                <td>{item.text}</td>
+                <td className={styles.actions}>
+                  <button
+                    onClick={() => handleEdit(item.id)}
+                    className={styles.action__button}
+                  >
+                    ✎
+                  </button>
+                  <button
+                    onClick={() => handleDelete(item.id)}
+                    className={styles.action__button}
+                  >
+                    <img src={bin} alt="" />
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
       <Modal
         title={`Редактирование заявки №${item.id}`}
         open={openEditModal}

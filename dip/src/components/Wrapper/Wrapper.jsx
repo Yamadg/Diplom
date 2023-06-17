@@ -5,9 +5,9 @@ import './Wrapper.module.scss'
 export default function Wrapper({ children, className = '' }) {
     
     return (
-        <main className={className}>
+        <main className={`${className} global-wrapper`}>
             <Nav />
-            <div className="container">{children}</div>
+            <div className="container wrapper-container">{children}</div>
             <Footer />
         </main>
     )

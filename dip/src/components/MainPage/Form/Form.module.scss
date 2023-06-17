@@ -4,9 +4,11 @@
   gap: 20px;
   align-items: center;
   margin-bottom: 5rem;
+  margin-top: 15rem;
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
+    margin-top: 10rem;
   }
 }
 
@@ -47,6 +49,8 @@
   &__error {
     color: red;
     font-size: 12px;
+    padding-top: 5px;
+    min-height: 13px;
   }
 
   &__inputs {

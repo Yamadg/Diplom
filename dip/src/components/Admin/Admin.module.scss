@@ -1,25 +1,28 @@
 .table {
-    margin: 1rem 0;
+  margin: 1rem 0;
 	width: 100%;
 	margin-bottom: 20px;
 	border: 5px solid #fff;
 	border-top: 5px solid #fff;
 	border-bottom: 3px solid #fff;
 	border-collapse: collapse; 
-	outline: 3px solid #ffd300;
 	font-size: 15px;
 	background: #fff!important;
+  min-width: 700px;
+  &__wrapper {
+    overflow-x: auto;
+  }
     table-layout: fixed;
 
     th {
         font-weight: bold;
         padding: 7px;
-        background: #ffd300;
+        background: var(--main-color);
         border: none;
         text-align: left;
         font-size: 15px;
         border-top: 3px solid #fff;
-        border-bottom: 3px solid #ffd300;
+        border-bottom: 3px solid var(--main-color);
         &:last-child {
             text-align: center;
         }

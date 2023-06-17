@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Wrapper from "../Wrapper/Wrapper";
 import styles from "./Login.module.scss";
 import axios from 'axios';
@@ -8,6 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 export default function Login() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+  const navigate = useNavigate();
 
   const login = async (e) => {
     e.preventDefault();
@@ -15,6 +17,7 @@ export default function Login() {
     .then(data => {
         toast.success('Успешно');
         localStorage.setItem('token', data.data.token);
+        navigate('/');
     })
     .catch(err => {
         toast.error(err.response.data.message)

@@ -4,6 +4,10 @@
     .wrapper {
         display: grid;
         grid-template-columns: 2fr 2fr 2fr;
+
+        @media screen and (max-width: 470px) {
+            grid-template-columns: 1fr 2fr;
+        }
     }
     &__sections, &__document {
         li {
@@ -11,7 +15,8 @@
             margin-bottom: 1rem;
 
             @media screen and (max-width: 456px) {
-                word-break: break-word;           
+                word-break: break-word;
+                font-size: 14px;      
             }
         }
     }

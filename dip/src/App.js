@@ -19,7 +19,9 @@ function App() {
                 <Route path={"command"} element={<OurCommand/>} />
                 <Route path={"about"} element={<AboutUs/>} />
                 <Route path={"login"} element={<Login />} />
-                <Route path={"admin"} element={<Admin />} />
+                {localStorage.getItem('token') && 
+                    <Route path={"admin"} element={<Admin />} />
+                }
             </Routes>
         </BrowserRouter>
     );

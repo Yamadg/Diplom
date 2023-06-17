@@ -11,7 +11,7 @@ export default function AboutUs() {
     <Wrapper>
       <MySlider />
       <section className={styles.about__us}>
-        <h1>О нас</h1>
+        <h1 className="title">О нас</h1>
         <p className={styles.about__us_content}>
           Также как перспективное планирование создаёт необходимость включения
           в производственный план целого ряда внеочередных мероприятий с учётом
@@ -64,7 +64,7 @@ export default function AboutUs() {
             </div>
           </div>
         </section>
-        <section className={styles.about__us_questions}>
+        {/* <section className={styles.about__us_questions}>
           <h3>Часто задаваемые вопросы</h3>
           <section className={styles.about__us_questions__content}>
             <Question title="Из чего формируется конечная стоимость проекта?">
@@ -88,7 +88,7 @@ export default function AboutUs() {
             <Question title="Могу ли я делегировать вам работу / согласование с подрядчиком / организацией?"></Question>
             <Question title="Могу ли я вернуть деньги на каком-либо из этапов работ?"></Question>
           </section>
-        </section>
+        </section> */}
       </section>
     </Wrapper>
   );
