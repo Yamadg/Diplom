@@ -1,16 +1,21 @@
 .command__item {
+    margin-bottom: 3rem;
     display: flex;
+    gap: 20px;
     &_img {
         display: flex;
         img {
             max-height: 400px;
-            max-width: 100%;
+            max-width: 350px;
+            width: 100%;
             margin: 0 auto;
+            object-fit: cover;
+            border-radius: 20px;
         }
     }
 
     &_content {
-        margin-top: 0.8rem;
+        
         max-height: calc(400px - 3rem);
         font-weight: 500;
         border: 1px solid rgba(219, 227, 240, 1);

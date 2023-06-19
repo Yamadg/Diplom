@@ -49,7 +49,7 @@ const MainPage = () => {
               </button>
             </a>
           </div>
-          <img src={building} alt="Фото" className={styles.mainPage__aboutUs__img}/>
+          <div><img src={building} alt="Фото" className={styles.mainPage__aboutUs__img}/></div>
         </div>
         {/* <div className={styles.mainPage__advantages}>
           <img src={advantages} alt="Фото"/>
@@ -60,7 +60,7 @@ const MainPage = () => {
                 <p className={styles.advantages__info}>
                 <p className={styles.advantages__info__text}>Беремся за заказы любой<br/>сложности</p>
                 <p className={styles.advantages__info__text}>Связь в любое время по <br/>всем впоросам</p>
-                <p className={styles.advantages__info__text}>Большой опыт работы</p>
+                <p className={styles.advantages__info__text}>Большой опыт работы <br /> в проектировании</p>
                 </p>
             </section>
         <MySlider/>

@@ -47,6 +47,10 @@ const MySlider = () => {
           {iconsData.map((icon) => (
             <SwiperSlide key={icon.id}>
               <img className={style.img__slider} src={icon.icon} alt="" />
+              <div className={style.slider__text__wrapper}>
+                <span className={style.slider__title} dangerouslySetInnerHTML={{__html: icon.title}}></span>
+                <span className={style.slider__text} dangerouslySetInnerHTML={{__html: icon.text}}></span>
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>
