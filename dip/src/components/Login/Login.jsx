@@ -13,7 +13,7 @@ export default function Login() {
 
   const login = async (e) => {
     e.preventDefault();
-    axios.post('http://localhost:8001/api/user/auth', {email: email, password: password})
+    axios.post('https://backend.vorobyova-project.ru/api/user/auth', {email: email, password: password})
     .then(data => {
         toast.success('Успешно');
         localStorage.setItem('token', data.data.token);

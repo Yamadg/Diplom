@@ -57,7 +57,7 @@ const Form = forwardRef(() => {
       return;
     }
 
-    await axios.post('http://localhost:8001/api/proposal/', {name, email, message})
+    await axios.post('https://backend.vorobyova-project.ru/api/proposal/', {name, email, message})
     .then(() => {
       toast.success('Успешно')
       setName('');
@@ -107,10 +107,6 @@ const Form = forwardRef(() => {
                   onChange={(e) => setMessage(e.target.value)}
         />
         <span className={styles.form__error}>{error?.message}</span>
-        <form action="?" method="POST">
-          <div className="g-recaptcha" data-sitekey="6LcXVKcmAAAAALZMWc60B_SsJvfVOs-Gu5yh3a0s"></div>
-          <br />
-        </form>
         <label className={styles.form__checkbox}>
           <input value={agree} onChange={(e) => setAgree(!!e.target.checked)} type="checkbox" />
           <span>Согласие на <a href={policy} target="_blank" rel="noreferrer">обработку персональных данных</a></span>

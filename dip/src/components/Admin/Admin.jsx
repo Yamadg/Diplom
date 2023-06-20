@@ -14,7 +14,7 @@ export default function Admin() {
 
   async function fetchProposals() {
     await axios
-      .get("http://localhost:8001/api/proposal", {
+      .get("https://backend.vorobyova-project.ru/api/proposal", {
         headers: { Authorization: authToken },
       })
       .then(({ data }) => setProposals(data));
@@ -37,7 +37,7 @@ export default function Admin() {
     e.preventDefault();
     console.log(item);
     await axios
-      .patch(`http://localhost:8001/api/proposal/${item.id}`, item, {
+      .patch(`https://backend.vorobyova-project.ru/api/proposal/${item.id}`, item, {
         headers: { Authorization: authToken },
       })
       .then(() => fetchProposals())
@@ -47,7 +47,7 @@ export default function Admin() {
 
   const deleteItem = async () => {
     await axios
-      .delete(`http://localhost:8001/api/proposal/${item.id}`, {
+      .delete(`https://backend.vorobyova-project.ru/api/proposal/${item.id}`, {
         headers: { Authorization: authToken },
       })
       .then(() => fetchProposals())
